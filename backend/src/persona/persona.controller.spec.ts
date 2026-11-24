@@ -4,11 +4,12 @@ import { PersonaService } from './persona.service.js';
 
 describe('PersonaController', () => {
   let controller: PersonaController;
+  const service = { create: vi.fn(), findAll: vi.fn(), findOne: vi.fn(), update: vi.fn(), remove: vi.fn() };
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [PersonaController],
-      providers: [PersonaService],
+      providers: [{ provide: PersonaService, useValue: service }],
     }).compile();
 
     controller = module.get<PersonaController>(PersonaController);
@@ -16,5 +17,11 @@ describe('PersonaController', () => {
 
   it('should be defined', () => {
     expect(controller).toBeDefined();
+  });
+
+  it('delega findOne al servicio', async () => {
+    service.findOne.mockResolvedValue({ idPersona: 'x' });
+    await expect(controller.findOne('x')).resolves.toEqual({ idPersona: 'x' });
+    expect(service.findOne).toHaveBeenCalledWith('x');
   });
 });
