@@ -30,6 +30,8 @@ import { UsuarioRolModule } from './usuario-rol/usuario-rol.module.js';
     }),
     PersonaModule,
     UsuarioModule,
+    RolModule,
+    UsuarioRolModule,
   ],
   controllers: [AppController],
   providers: [AppService],
