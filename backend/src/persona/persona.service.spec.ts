@@ -1,21 +1,21 @@
 import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { PersonaService } from './persona.service.js';
-import { Persona } from './entities/persona.entity.js';
+import { PersonaService } from './persona.service';
+import { Persona } from './entities/persona.entity';
 
 describe('PersonaService', () => {
   let service: PersonaService;
   const repo = {
-    create: vi.fn((x) => x),
-    save: vi.fn(async (x) => x),
-    find: vi.fn(),
-    findOneBy: vi.fn(),
-    remove: vi.fn(),
+    create: jest.fn((x) => x),
+    save: jest.fn(async (x) => x),
+    find: jest.fn(),
+    findOneBy: jest.fn(),
+    remove: jest.fn(),
   };
 
   beforeEach(async () => {
-    vi.clearAllMocks();
+    jest.clearAllMocks();
     const module: TestingModule = await Test.createTestingModule({
       providers: [PersonaService, { provide: getRepositoryToken(Persona), useValue: repo }],
     }).compile();

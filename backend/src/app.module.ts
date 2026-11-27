@@ -1,16 +1,16 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller.js';
-import { AppService } from './app.service.js';
-import { Persona } from './persona/entities/persona.entity.js';
-import { PersonaModule } from './persona/persona.module.js';
-import { Rol } from './rol/entities/rol.entity.js';
-import { RolModule } from './rol/rol.module.js';
-import { Usuario } from './usuario/entities/usuario.entity.js';
-import { UsuarioModule } from './usuario/usuario.module.js';
-import { UsuarioRol } from './usuario-rol/entities/usuario-rol.entity.js';
-import { UsuarioRolModule } from './usuario-rol/usuario-rol.module.js';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { Persona } from './persona/entities/persona.entity';
+import { PersonaModule } from './persona/persona.module';
+import { Rol } from './rol/entities/rol.entity';
+import { RolModule } from './rol/rol.module';
+import { Usuario } from './usuario/entities/usuario.entity';
+import { UsuarioModule } from './usuario/usuario.module';
+import { UsuarioRol } from './usuario-rol/entities/usuario-rol.entity';
+import { UsuarioRolModule } from './usuario-rol/usuario-rol.module';
 
 @Module({
   imports: [

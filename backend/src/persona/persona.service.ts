@@ -1,10 +1,10 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { handleDbError } from '../common/db-errors.js';
-import { CreatePersonaDto } from './dto/create-persona.dto.js';
-import { UpdatePersonaDto } from './dto/update-persona.dto.js';
-import { Persona } from './entities/persona.entity.js';
+import { handleDbError } from '../common/db-errors';
+import { CreatePersonaDto } from './dto/create-persona.dto';
+import { UpdatePersonaDto } from './dto/update-persona.dto';
+import { Persona } from './entities/persona.entity';
 
 @Injectable()
 export class PersonaService {

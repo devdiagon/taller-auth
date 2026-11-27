@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Unique } from 'typeorm';
 import type { Relation } from 'typeorm';
-import { Rol } from '../../rol/entities/rol.entity.js';
-import { Usuario } from '../../usuario/entities/usuario.entity.js';
+import { Rol } from '../../rol/entities/rol.entity';
+import { Usuario } from '../../usuario/entities/usuario.entity';
 
 @Entity({ name: 'usuario_rol' })
 @Unique('uq_usuario_rol', ['idUsuario', 'idRol'])

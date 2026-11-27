@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post } from '@nestjs/common';
-import { CreatePersonaDto } from './dto/create-persona.dto.js';
-import { UpdatePersonaDto } from './dto/update-persona.dto.js';
-import { PersonaService } from './persona.service.js';
+import { CreatePersonaDto } from './dto/create-persona.dto';
+import { UpdatePersonaDto } from './dto/update-persona.dto';
+import { PersonaService } from './persona.service';
 
 @Controller('persona')
 export class PersonaController {

@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import type { Relation } from 'typeorm';
-import { Persona } from '../../persona/entities/persona.entity.js';
+import { Persona } from '../../persona/entities/persona.entity';
 
 @Entity({ name: 'usuario' })
 export class Usuario {

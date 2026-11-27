@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { PersonaController } from './persona.controller.js';
-import { PersonaService } from './persona.service.js';
+import { PersonaController } from './persona.controller';
+import { PersonaService } from './persona.service';
 
 describe('PersonaController', () => {
   let controller: PersonaController;
-  const service = { create: vi.fn(), findAll: vi.fn(), findOne: vi.fn(), update: vi.fn(), remove: vi.fn() };
+  const service = { create: jest.fn(), findAll: jest.fn(), findOne: jest.fn(), update: jest.fn(), remove: jest.fn() };
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({

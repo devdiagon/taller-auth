@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post } from '@nestjs/common';
-import { CreateRolDto } from './dto/create-rol.dto.js';
-import { UpdateRolDto } from './dto/update-rol.dto.js';
-import { RolService } from './rol.service.js';
+import { CreateRolDto } from './dto/create-rol.dto';
+import { UpdateRolDto } from './dto/update-rol.dto';
+import { RolService } from './rol.service';
 
 @Controller('rol')
 export class RolController {
