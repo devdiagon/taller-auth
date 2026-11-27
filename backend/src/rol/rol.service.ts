@@ -18,7 +18,7 @@ export class RolService {
     }
   }
 
-  findAll() {
+  async findAll() {
     return this.repo.find();
   }
 

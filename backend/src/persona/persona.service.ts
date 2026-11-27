@@ -18,7 +18,7 @@ export class PersonaService {
     }
   }
 
-  findAll() {
+  async findAll() {
     return this.repo.find();
   }
 

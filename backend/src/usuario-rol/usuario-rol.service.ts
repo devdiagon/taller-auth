@@ -20,7 +20,7 @@ export class UsuarioRolService {
     return this.findOne(saved.idUsuarioRol);
   }
 
-  findAll() {
+  async findAll() {
     return this.repo.find({ relations: { usuario: true, rol: true } });
   }
 

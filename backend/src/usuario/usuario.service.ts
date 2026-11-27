@@ -24,7 +24,7 @@ export class UsuarioService {
     return this.findOne(saved.idUsuario);
   }
 
-  findAll() {
+  async findAll() {
     return this.repo.find({ relations: { persona: true } });
   }
 
